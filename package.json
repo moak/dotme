@@ -1,7 +1,8 @@
 {
-  "name": "dotme",
+  "name": "@seyaa/dotme",
   "version": "1.0.1",
   "main": "index.js",
   "author": "Maxime Barbot <maxime.b@sportheroes.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/moak/dotme.git"
 }
