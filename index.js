@@ -1,3 +1,3 @@
-const utils = require('./src/utils');
+import utils from './utils';
 
-module.exports = utils;
+export { utils };
