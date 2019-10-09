@@ -1,8 +1,8 @@
 {
-  "name": "@seyaa/dotme",
-  "version": "1.0.2",
+  "name": "@dotme",
+  "version": "1.0.3",
   "main": "index.js",
-  "author": "Maxime Barbot <maxime.b@sportheroes.com>",
+  "author": "Maxime Barbot <barbot.max@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/moak/dotme.git"
 }
