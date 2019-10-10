@@ -1,6 +1,6 @@
 {
   "name": "dotme",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "main": "index.js",
   "author": "Maxime Barbot <barbot.max@gmail.com>",
   "license": "UNLICENSED",
@@ -10,7 +10,8 @@
     "build2": "NODE_ENV=production babel src -d . --copy-files"
   },
   "files": [
-    "utils/*"
+    "utils/*",
+    "config/*"
   ],
   "dependencies": {
     "@babel/cli": "^7.6.3",
