@@ -17,13 +17,12 @@ var slugify = function slugify(text) {
 
 exports.slugify = slugify;
 
-var generate = function generate(_ref) {
-  var _ref$length = _ref.length,
-      length = _ref$length === void 0 ? 15 : _ref$length;
+var generate = function generate() {
+  var amount = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 15;
   var text = '';
   var allowedCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-  for (var i = 0; i < length; i++) {
+  for (var i = 0; i < amount; i++) {
     text += allowedCharacters.charAt(Math.floor(Math.random() * allowedCharacters.length));
   }
 

@@ -6,11 +6,11 @@ export const slugify = text =>
     .toLowerCase()
     .replace(/[^0-9a-zA-Z_]/g, '_');
 
-export const generate = ({ length = 15 }) => {
+export const generate = (amount = 15) => {
   let text = '';
   const allowedCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-  for (var i = 0; i < length; i++) {
+  for (let i = 0; i < amount; i++) {
     text += allowedCharacters.charAt(Math.floor(Math.random() * allowedCharacters.length));
   }
 
