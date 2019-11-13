@@ -8,7 +8,7 @@ export const validate = (image, type) => {
       return { imageValid: false, error: 'too_big' };
     }
 
-    const acceptedImageExentions = config.upload.allowedImageExtensions;
+    const acceptedImageExentions = config.upload.allowedExtensions;
 
     if (!acceptedImageExentions.includes(image.type)) {
       return { imageValid: false, error: 'wrong_type' };
@@ -21,7 +21,7 @@ export const validate = (image, type) => {
       return { imageValid: false, error: 'too_big' };
     }
 
-    const acceptedFileExentions = config.upload.allowedFileExtensions;
+    const acceptedFileExentions = config.upload.allowedExtensions;
 
     if (!acceptedFileExentions.includes(image.type)) {
       return { imageValid: false, error: 'wrong_type' };

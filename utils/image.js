@@ -20,7 +20,7 @@ var validate = function validate(image, type) {
       };
     }
 
-    var acceptedImageExentions = _config["default"].upload.allowedImageExtensions;
+    var acceptedImageExentions = _config["default"].upload.allowedExtensions;
 
     if (!acceptedImageExentions.includes(image.type)) {
       return {
@@ -40,7 +40,7 @@ var validate = function validate(image, type) {
       };
     }
 
-    var acceptedFileExentions = _config["default"].upload.allowedFileExtensions;
+    var acceptedFileExentions = _config["default"].upload.allowedExtensions;
 
     if (!acceptedFileExentions.includes(image.type)) {
       return {
