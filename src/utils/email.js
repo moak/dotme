@@ -3,24 +3,36 @@ const mailjet = require('node-mailjet').connect(
   '335acc2e71b80358be992bd3fc5edc03',
 );
 
-export const send = ({ from, to, subject, text, html = null }) => {
+export const send = ({
+  fromName = 'Livefolio',
+  from = 'barbot.max@gmail.com',
+  to = 'barbot.max@gmail.com',
+  toName = null,
+  subject = null,
+  text = null,
+  html = null,
+  templateVariables = null,
+  templateId = null,
+}) => {
   const request = mailjet.post('send', { version: 'v3.1' }).request({
     Messages: [
       {
         From: {
-          Email: 'barbot.max@gmail.com',
-          Name: 'Livefolio',
+          Email: from,
+          Name: fromName,
         },
         To: [
           {
             Email: to,
-            // Name: 'Maxime',
+            Name: toName,
           },
         ],
+        TemplateID: templateId,
+        TemplateLanguage: templateId || false,
+        Variables: templateVariables,
         Subject: subject,
         TextPart: text,
         HTMLPart: html,
-        CustomID: 'AppGettingStartedTest',
       },
     ],
   });
