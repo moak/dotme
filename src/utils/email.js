@@ -28,7 +28,7 @@ export const send = ({
           },
         ],
         TemplateID: templateId,
-        TemplateLanguage: templateId || false,
+        TemplateLanguage: templateId ? true : false,
         Variables: templateVariables,
         Subject: subject,
         TextPart: text,
@@ -36,6 +36,10 @@ export const send = ({
       },
     ],
   });
-
   return request;
+};
+
+const isValid = email => {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
 };

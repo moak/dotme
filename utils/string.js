@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
+Object.defineProperty(exports, '__esModule', {
+  value: true,
 });
 exports.generate = exports.slugify = exports.capitalize = void 0;
 
@@ -12,7 +12,10 @@ var capitalize = function capitalize(item) {
 exports.capitalize = capitalize;
 
 var slugify = function slugify(text) {
-  return text.toString().toLowerCase().replace(/[^0-9a-zA-Z_]/g, '_');
+  return text
+    .toString()
+    .toLowerCase()
+    .replace(/[^0-9a-zA-Z_]/g, '_');
 };
 
 exports.slugify = slugify;
