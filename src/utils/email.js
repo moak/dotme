@@ -39,7 +39,7 @@ export const send = ({
   return request;
 };
 
-const isValid = email => {
+export const isValid = email => {
   var re = /\S+@\S+\.\S+/;
   return re.test(email);
 };

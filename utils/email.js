@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.send = void 0;
+exports.isValid = exports.send = void 0;
 
 var mailjet = require('node-mailjet').connect('40272bb9df0f23fedf0eb37976369f99', '335acc2e71b80358be992bd3fc5edc03');
 
@@ -55,3 +55,5 @@ var isValid = function isValid(email) {
   var re = /\S+@\S+\.\S+/;
   return re.test(email);
 };
+
+exports.isValid = isValid;
